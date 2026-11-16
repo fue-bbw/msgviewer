@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msgviewer"
+version = "0.1.0"
+description = "MsgViewer- und Umwandler-Tool für Outlook-.msg-Dateien"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "extract-msg>=0.54",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+msgviewer = "msgviewer.viewer:main"
+msgconvert = "msgviewer.converter:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
