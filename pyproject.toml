@@ -19,6 +19,7 @@ test = ["pytest>=8"]
 [project.scripts]
 msgviewer = "msgviewer.viewer:main"
 msgconvert = "msgviewer.converter:main"
+msgviewer-gui = "msgviewer.gui:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
